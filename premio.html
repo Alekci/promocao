@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizarre Vibe - Seu Prêmio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para centralizar o card de prêmio */
+        .main-premio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+        .card-premio {
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .img-premio {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--detalhe-ouro);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px var(--roxo-principal);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+       <header>
+        <div class="header-container">
+            <div class="logo">Bizarre<span>Vibe</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#informacoes">Informações</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-premio">
+        <section class="informacao card-premio">
+            <h2 style="color: var(--detalhe-ouro); margin-bottom: 10px;">PARABÉNS!</h2>
+            <p style="color: var(--texto-claro); margin-bottom: 20px;">Você recebeu um moletom!</p>
+            
+            <img src="image/moletom.png" alt="Prêmio Especial" class="img-premio">
+
+            <h3>Cheque o seu e-mail para mais informações sobre o prêmio!</h3>
+            
+            <a href="index.html" class="btn">Voltar à Loja</a>
+        </section>
+    </main>
+
+    <footer class="sobre">
+        <p>&copy; 2026 Bizarre Vibe. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
