@@ -90,6 +90,12 @@ nav a:hover {
     text-shadow: 3px 3px 0px var(--roxo-principal);
     margin-bottom: 10px;
 }
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+}
 
 /* Seção de Informações */
 #informacoes {
@@ -180,4 +186,157 @@ footer a {
     color: var(--roxo-brilho);
     text-decoration: none;
     margin: 0 10px;
+}
+/* Estilização da Seção de Cadastro */
+#cadastro {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--fundo-card);
+    border-radius: 15px;
+    border: 1px solid var(--roxo-principal);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.section-title p {
+    color: var(--detalhe-ouro);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilização do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--roxo-brilho);
+    font-size: 0.9rem;
+}
+
+input {
+    background-color: #0f0f13; /* Fundo mais escuro que o card */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de foco (quando clica na caixa) */
+input:focus {
+    outline: none;
+    border-color: var(--roxo-brilho);
+    box-shadow: 0 0 10px rgba(176, 102, 255, 0.4);
+    background-color: #1a1a21;
+}
+
+/* Ajuste para o botão de cadastro */
+.btn-cadstrar {
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    background: linear-gradient(45deg, var(--roxo-principal), #4b0082);
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-cadstrar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--roxo-brilho);
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+    #cadastro {
+        margin: 20px;
+        padding: 25px;
+    }
+}
+/* Container do Formulário como Grade */
+#cadastro form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas iguais */
+    gap: 15px 20px;
+    align-items: end;
+}
+
+/* Campos que ocupam a linha inteira (Nome, Email, Senha) */
+#cadastro label[for="nome"], #cadastro input#nome,
+#cadastro label[for="email"], #cadastro input#email,
+#cadastro label[for="senha"], #cadastro input#senha,
+#cadastro .promo-container,
+#cadastro .btn-group {
+    grid-column: span 2;
+}
+
+/* Estilização do Campo de Código Promocional */
+.promo-container {
+    background: rgba(255, 223, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px dashed var(--roxo-principal);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.promo-container label {
+    color: var(--roxo-principal);
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promo-container input {
+    margin-bottom: 0;
+    text-align: center;
+    border-color: var(--detalhe-ouro);
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+/* Agrupamento de Botões */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-voltar {
+    text-align: center;
+    text-decoration: none;
+    color: var(--texto-cinza);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    color: var(--texto-claro);
+    text-decoration: underline;
+}
+
+/* Ajuste de Responsividade */
+@media (max-width: 600px) {
+    #cadastro form {
+        grid-template-columns: 1fr; /* Volta para 1 coluna no celular */
+    }
+    #cadastro label, #cadastro input, 
+    #cadastro .promo-container, #cadastro .btn-group {
+        grid-column: span 1;
+    }
 }

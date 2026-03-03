@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Bizarre Vibe</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de código</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="cadastro-body">
+
+<body>
+
     <header>
         <div class="header-container">
             <div class="logo">Bizarre<span>Vibe</span></div>
@@ -14,47 +17,68 @@
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="index.html#informacoes">Informações</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="form-wrapper">
-        <div class="form-container">
-            <h2>Crie sua conta</h2>
-            <p>Prepare-se para o despertar do seu estilo.</p>
-            
-            <form action="#">
-                <div class="input-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" required>
-                </div>
+    <section id="cadastro" class="products">
+        <h2 class="section-title">
+            <p>Resgate seu prêmio!</p>
+        </h2>
+ <form method="post">
+    <label for="nome">Nome Completo</label>
+    <input type="text" id="nome" placeholder="Seu nome aqui" required>
 
-                <div class="input-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="seu@email.com" required>
-                </div>
+    <label for="email">E-Mail</label>
+    <input type="email" id="email" placeholder="Seu E-Mail" required>
 
-                <div class="input-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" required>
-                </div>
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" placeholder="Digite uma senha" required>
 
-                <div class="input-group">
-                    <label for="confirmar-senha">Confirmar Senha</label>
-                    <input type="password" id="confirmar-senha"  required>
-                </div>
+    <div>
+        <label>Telefone</label>
+        <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+    </div>
+    <div>
+        <label>CEP</label>
+        <input type="text" id="cep" placeholder="89100-000" required>
+    </div>
 
-                <button type="submit" class="btn">Finalizar Cadastro</button>
-            </form>
-            
-            <p class="login-link">Já tem uma conta? <a href="#">Faça login</a></p>
-        </div>
-    </main>
+    <div>
+        <label>Cidade</label>
+        <input type="text" id="cidade" required>
+    </div>
+    <div>
+        <label>Estado</label>
+        <input type="text" id="estado" required>
+    </div>
 
-    <footer>
+    <div class="promo-container">
+        <label for="promo">Digite seu código promocional</label>
+        <input type="text" id="promo" placeholder="EX: 13042009<3" required>
+    </div>
+
+    <div class="btn-group">
+        <button type="submit" class="btn-cadstrar">Cadastrar</button>
+        <a href="index.html" class="btn-voltar">← Voltar para a página inicial</a>
+    </div>
+</form>
+
+    </section>
+
+
+    <!-- Rodapé -->
+     <footer>
+        Feito por Alex
         <p>&copy; 2026 Bizarre Vibe. Todos os direitos reservados.</p>
+        <a href="https://instagram.com/bizarrevibe">Instagram</a><p>
+        <a href="https://tiktok.com/@bizarrevibe">TikTok</a>
     </footer>
+
 </body>
+
 </html>
